@@ -1,0 +1,26 @@
+{
+  "name": "kbtrmalfunctioningkeys",
+  "version": "1.0.0",
+  "description": "Keyboard test for malfunctioning keys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheoKondak/kbtrTstMlfunctioningKeys.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheoKondak/kbtrTstMlfunctioningKeys/issues"
+  },
+  "homepage": "https://github.com/TheoKondak/kbtrTstMlfunctioningKeys#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {}
+}
