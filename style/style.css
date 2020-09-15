@@ -14,6 +14,12 @@ h1 {
 }
 
 /* Keyboard Buttons */
+#keyboard .active {
+  -webkit-box-shadow: 0px 0px 16px -1px white;
+  -moz-box-shadow: 0px 0px 16px -1px white;
+  box-shadow: 0px 0px 16px -1px white;
+}
+
 html {
   font-size: 2vw;
 }
@@ -22,46 +28,78 @@ span {
   font-size: 0.4em;
 }
 
-.main-wrapper {
+#mainWrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
 }
-.main-wrapper #header {
+#mainWrapper #header {
   max-height: 12vh;
   min-height: 100px;
   width: 100vw;
 }
-.main-wrapper #header .page-title {
+#mainWrapper #header .page-title {
   height: auto;
   width: 100%;
   Background-color: blue;
   display: flex;
   justify-content: flex-start;
 }
-.main-wrapper #header .page-title h1 {
+#mainWrapper #header .page-title h1 {
   font-size: 1.2em;
   padding: 0.2em;
   display: block;
 }
-.main-wrapper #header .header-info {
+#mainWrapper #header .header-info {
   background-color: orange;
 }
-.main-wrapper #main {
+#mainWrapper #main {
   max-height: 86vh;
   height: 100%;
   background-color: purple;
 }
-.main-wrapper #main .mainLeft {
+#mainWrapper #main .mainLeft {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-wrapper #main .sideBar {
+#mainWrapper #main .sideBar {
   margin-top: 20px;
   overflow-y: scroll;
   max-height: 84vh;
+}
+
+#mouseEventWrapper {
+  height: 100vw;
+  width: 100vw;
+  opacity: 0;
+  transition-duration: 1s;
+}
+#mouseEventWrapper.mouseLeave {
+  opacity: 1;
+}
+#mouseEventWrapper .mouseEventContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  padding: 20px;
+  background-color: orange;
+  -webkit-box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
+  -moz-box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
+  box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
+  position: absolute;
+  left: 40%;
+  bottom: 10px;
+}
+#mouseEventWrapper .mouseEventContainer div p {
+  font-size: 0.4em;
+  margin-bottom: 0;
+}
+#mouseEventWrapper .mouseEventContainer div em {
+  font-size: 0.3em;
 }
 
 #keyboard {

@@ -4,12 +4,16 @@
 const keyboardMap = {
     Backspace: [8, '←'],
     Tab: [9, ' ↹ Tab'],
-    Enter: [13, '↵ Enter '],
+    EnterLeft: [13, '↵ Enter '],
+    EnterRight: [13, '↵'],
     ShiftLeft: [16, '⇧ Shift'],
     ShiftRight: [16, 'Shift ⇧'],
     ControlRight: [17, 'ctrl rght'],
     ControlLeft: [17, 'ctrl lft'],
-    Alt: [18, 'alt'],
+    AltLeft: [18, 'alt lft'],
+    AltRight: [18, 'alt rght'],
+    Space: [32, '___'],
+    ContextMenu: [93, '≣ Menu'],
     Pause: [19, 'Pause'],
     CapsLock: [20, 'Caps Lock'],
     Escape: [27, 'Esc'],
@@ -90,7 +94,7 @@ const keyboardMap = {
     F11: [122, 'f11'],
     F12: [123, 'f12'],
     NumLock: [144, 'Num Lock'],
-    // ScrollLock: [145, ''],
+    ScrollLock: [145, 'Scr Lk'],
     Semicolon: [186, ';'],
     Equal: [187, '='],
     Comma: [188, ','],
@@ -101,49 +105,80 @@ const keyboardMap = {
     BracketLeft: [219, '{'],
     Slash: [220, '/'],
     BracketRight: [221, '}'],
-    Quote: [222, ' \' '],
-    Backquote: [192, '`']
+    Backslash: [222, ' \' '],
+    Backquote: [192, '`'],
+    AudioVolumeDown: [174, 'vlm ↓'],
+    AudioVolumeUp: [175, 'vlm ↑']
 }
-
-
-const keyboardMapArray = Object.keys(keyboardMap);
-
-
 
 const pressedLog = document.getElementById('pressedLog'),
     pressed = {};
 
 window.onkeydown = function (e) {
     e.preventDefault();
+    pressed[e.which] ? pressed[e.which] : pressed[e.which] = e.timeStamp;
 
-    if (pressed[e.which]) return;
-    pressed[e.which] = e.timeStamp;
 
-    // console.log(e.timeStamp);
+keyPressDown(e);
 
 };
 
 window.onkeyup = function (e) {
-
-
     const duration = (e.timeStamp - pressed[e.which]) / 1000;
     let getIcon;
-    console.log(e);
+
+    // console.log('Key: ' + e.key);
+    // console.log('Code: ' + e.code + ' | keyCode: ' + e.keyCode);
+    // console.log(e);
+
+    e.preventDefault();
+
+keyPressUp(e);
 
     switch (e.keyCode) {
 
-        case 16: e.location == 1 ? getIcon = keyboardMap.ShiftLeft : getIcon = keyboardMap.ControlLeft;
-        case 17: e.location == 1 ? getIcon = keyboardMap.ShiftLeft : getIcon = keyboardMap.ControlRight;
+        case 13: e.location == 0 ? getIcon = keyboardMap.EnterLeft : getIcon = keyboardMap.EnterRight; break;
+        case 16: e.location == 1 ? getIcon = keyboardMap.ShiftLeft : getIcon = keyboardMap.ShiftRight; break;
+        case 17: e.location == 1 ? getIcon = keyboardMap.ControlLeft : getIcon = keyboardMap.ControlRight; break;
+        case 18: e.location == 1 ? getIcon = keyboardMap.AltLeft : getIcon = keyboardMap.AltRight; break;
+        case 174: getIcon = keyboardMap.AudioVolumeDown; break;
+        case 175: getIcon = keyboardMap.AudioVolumeUp; break;
         default: getIcon = keyboardMap[e.code];
 
     }
 
-
-
-
     pressedLog.innerHTML += '<div class="keyLogAction"><span class="keyLogBtn">' + getIcon[1] + '</span><span class="keyLogTxt"> pressed for </span><span class="keyLogTime">' + Math.round((duration + Number.EPSILON) * 1000) / 1000 + '</span><span class="keyLogSeconds">  seconds</span></div>';
     pressed[e.which] = 0;
 
+
+
     if (!pressed[e.which]) return;
 };
+
+
+
 // ========
+// Mouse Enter/Exit Events
+let mouseEvent = document.querySelector('#mainWrapper');
+let mouseEventWrapper = document.querySelector('#mouseEventWrapper');
+
+mouseEvent.addEventListener('mouseleave', e => mouseEventWrapper.classList.add("mouseLeave"));
+mouseEvent.addEventListener('mouseenter', e => mouseEventWrapper.classList.remove("mouseLeave"));
+
+
+
+const keyPressDown = (e) => {
+    
+    const keyPressed = e.code;
+    console.log(keyPressed);
+    const element = document.getElementById(keyPressed);
+    element.classList.add('active');
+  
+}
+
+
+const keyPressUp = (e) => {
+    const keyPressed = e.code;
+    const element = document.getElementById(keyPressed);
+    element.classList.remove('active');
+}

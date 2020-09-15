@@ -17,7 +17,7 @@
     
 
 
-    <div class="container-fluid main-wrapper">
+    <div class="container-fluid" id='mainWrapper'>
 
         <div class="row" id='header'>
 <div class="col-sm-4 pl-0 pr-0 page-title">
@@ -25,6 +25,7 @@
 </div>
 
 <div class="col-md-8 header-info ">
+<h3>HeaderInfo</h3>
 
 </div>
 
@@ -33,339 +34,444 @@
         <div class="row" id='main'>
         <div class="col-md-9 pl-0 pr-0 mr-3 ml-3 mainLeft">
     
-        <div id="keyboard">
+            <div id="keyboard">
 
-            <div class="keyboard-inner">
-
-
-                <!-- First Row -->
-                <div class='key-btn escape ' key-id='27 '>
-                    <div class='inner-btn'><span>Esc</span></div>
-                </div>
-
-
-                <div class='key-btn f1 ' key-id='112 '>
-                    <div class='inner-btn'><span>f1</span></div>
-                </div>
-                <div class='key-btn f2 ' key-id='113 '>
-                    <div class='inner-btn'><span>f2</span></div>
-                </div>
-                <div class='key-btn f3 ' key-id='114 '>
-                    <div class='inner-btn'><span>f3</span></div>
-                </div>
-                <div class='key-btn f4 ' key-id='115 '>
-                    <div class='inner-btn'><span>f4</span></div>
-                </div>
-
-                <div class='key-btn f5 ' key-id='116 '>
-                    <div class='inner-btn'><span>f5</span></div>
-                </div>
-                <div class='key-btn f6 ' key-id='117 '>
-                    <div class='inner-btn'><span>f6</span></div>
-                </div>
-                <div class='key-btn f7 ' key-id='118 '>
-                    <div class='inner-btn'><span>f7</span></div>
-                </div>
-                <div class='key-btn f8 ' key-id='119 '>
-                    <div class='inner-btn'><span>f8</span></div>
-                </div>
-
-                <div class='key-btn f9 ' key-id='120 '>
-                    <div class='inner-btn'><span>f9</span></div>
-                </div>
-                <div class='key-btn f10 ' key-id='121 '>
-                    <div class='inner-btn'><span>f10</span></div>
-                </div>
-                <div class='key-btn f11 ' key-id='122 '>
-                    <div class='inner-btn'><span>f11</span></div>
-                </div>
-                <div class='key-btn f12 ' key-id='123 '>
-                    <div class='inner-btn'><span>f12</span></div>
-                </div>
-
-
-                <div class='key-btn scroll_lock ' key-id='145 '>
-                    <div class='inner-btn'><span></span></div>
-                </div>
-                <div class='key-btn pause_break ' key-id='19 '>
-                    <div class='inner-btn'><span>Pause</span></div>
-                </div>
-
-<!-- End of First Row -->
-
-
-
-<!-- Second Row -->
-
-
-
-
-
-
-
-
-<!-- End of Second Row -->
-
-
-
-
-                <div class='key-btn backspace ' key-id='8 '>
-                    <div class='inner-btn'><span>←</span></div>
-                </div>
-                <div class='key-btn tab ' key-id='9 '>
-                    <div class='inner-btn'><span> ↹ Tab</span></div>
-                </div>
-                <div class='key-btn enter ' key-id='13 '>
-                    <div class='inner-btn'><span>↵ Enter </span></div>
-                </div>
-                <div class='key-btn shift ' key-id='16 '>
-                    <div class='inner-btn'><span>⇧ Shift</span></div>
-                </div>
-                <div class='key-btn ctrl ' key-id='17 '>
-                    <div class='inner-btn'><span>ctrl</span></div>
-                </div>
-                <div class='key-btn alt ' key-id='18 '>
-                    <div class='inner-btn'><span>alt</span></div>
-                </div>
-              
-                <div class='key-btn caps_lock ' key-id='20 '>
-                    <div class='inner-btn'><span>Caps Lock</span></div>
-                </div>
-              
-                <div class='key-btn page_up ' key-id='33 '>
-                    <div class='inner-btn'><span>Page Up</span></div>
-                </div>
-                <div class='key-btn page_down ' key-id='34 '>
-                    <div class='inner-btn'><span>Page Down</span></div>
-                </div>
-                <div class='key-btn end ' key-id='35 '>
-                    <div class='inner-btn'><span>End</span></div>
-                </div>
-                <div class='key-btn home ' key-id='36 '>
-                    <div class='inner-btn'><span>Home</span></div>
-                </div>
-                <div class='key-btn left_arrow ' key-id='37 '>
-                    <div class='inner-btn'><span>←</span></div>
-                </div>
-                <div class='key-btn up_arrow ' key-id='38 '>
-                    <div class='inner-btn'><span>↑</span></div>
-                </div>
-                <div class='key-btn right_arrow ' key-id='39 '>
-                    <div class='inner-btn'><span>→</span></div>
-                </div>
-                <div class='key-btn down_arrow ' key-id='40 '>
-                    <div class='inner-btn'><span>↓</span></div>
-                </div>
-                <div class='key-btn insert ' key-id='45 '>
-                    <div class='inner-btn'><span>Ins</span></div>
-                </div>
-                <div class='key-btn delete ' key-id='46 '>
-                    <div class='inner-btn'><span>Del</span></div>
-                </div>
-                <div class='key-btn 0 ' key-id='48 '>
-                    <div class='inner-btn'><span>0</span></div>
-                </div>
-                <div class='key-btn 1 ' key-id='49 '>
-                    <div class='inner-btn'><span>1</span></div>
-                </div>
-                <div class='key-btn 2 ' key-id='50 '>
-                    <div class='inner-btn'><span>2</span></div>
-                </div>
-                <div class='key-btn 3 ' key-id='51 '>
-                    <div class='inner-btn'><span>3</span></div>
-                </div>
-                <div class='key-btn 4 ' key-id='52 '>
-                    <div class='inner-btn'><span>4</span></div>
-                </div>
-                <div class='key-btn 5 ' key-id='53 '>
-                    <div class='inner-btn'><span>5</span></div>
-                </div>
-                <div class='key-btn 6 ' key-id='54 '>
-                    <div class='inner-btn'><span>6</span></div>
-                </div>
-                <div class='key-btn 7 ' key-id='55 '>
-                    <div class='inner-btn'><span>7</span></div>
-                </div>
-                <div class='key-btn 8 ' key-id='56 '>
-                    <div class='inner-btn'><span>8</span></div>
-                </div>
-                <div class='key-btn 9 ' key-id='57 '>
-                    <div class='inner-btn'><span>9</span></div>
-                </div>
-                <div class='key-btn a ' key-id='65 '>
-                    <div class='inner-btn'><span>a</span></div>
-                </div>
-                <div class='key-btn b ' key-id='66 '>
-                    <div class='inner-btn'><span>b</span></div>
-                </div>
-                <div class='key-btn c ' key-id='67 '>
-                    <div class='inner-btn'><span>c</span></div>
-                </div>
-                <div class='key-btn d ' key-id='68 '>
-                    <div class='inner-btn'><span>d</span></div>
-                </div>
-                <div class='key-btn e ' key-id='69 '>
-                    <div class='inner-btn'><span>e</span></div>
-                </div>
-                <div class='key-btn f ' key-id='70 '>
-                    <div class='inner-btn'><span>f</span></div>
-                </div>
-                <div class='key-btn g ' key-id='71 '>
-                    <div class='inner-btn'><span>g</span></div>
-                </div>
-                <div class='key-btn h ' key-id='72 '>
-                    <div class='inner-btn'><span>h</span></div>
-                </div>
-                <div class='key-btn i ' key-id='73 '>
-                    <div class='inner-btn'><span>i</span></div>
-                </div>
-                <div class='key-btn j ' key-id='74 '>
-                    <div class='inner-btn'><span>j</span></div>
-                </div>
-                <div class='key-btn k ' key-id='75 '>
-                    <div class='inner-btn'><span>k</span></div>
-                </div>
-                <div class='key-btn l ' key-id='76 '>
-                    <div class='inner-btn'><span>l</span></div>
-                </div>
-                <div class='key-btn m ' key-id='77 '>
-                    <div class='inner-btn'><span>m</span></div>
-                </div>
-                <div class='key-btn n ' key-id='78 '>
-                    <div class='inner-btn'><span>n</span></div>
-                </div>
-                <div class='key-btn o ' key-id='79 '>
-                    <div class='inner-btn'><span>o</span></div>
-                </div>
-                <div class='key-btn p ' key-id='80 '>
-                    <div class='inner-btn'><span>p</span></div>
-                </div>
-                <div class='key-btn q ' key-id='81 '>
-                    <div class='inner-btn'><span>q</span></div>
-                </div>
-                <div class='key-btn r ' key-id='82 '>
-                    <div class='inner-btn'><span>r</span></div>
-                </div>
-                <div class='key-btn s ' key-id='83 '>
-                    <div class='inner-btn'><span>s</span></div>
-                </div>
-                <div class='key-btn t ' key-id='84 '>
-                    <div class='inner-btn'><span>t</span></div>
-                </div>
-                <div class='key-btn u ' key-id='85 '>
-                    <div class='inner-btn'><span>u</span></div>
-                </div>
-                <div class='key-btn v ' key-id='86 '>
-                    <div class='inner-btn'><span>v</span></div>
-                </div>
-                <div class='key-btn w ' key-id='87 '>
-                    <div class='inner-btn'><span>w</span></div>
-                </div>
-                <div class='key-btn x ' key-id='88 '>
-                    <div class='inner-btn'><span>x</span></div>
-                </div>
-                <div class='key-btn y ' key-id='89 '>
-                    <div class='inner-btn'><span>y</span></div>
-                </div>
-                <div class='key-btn z ' key-id='90 '>
-                    <div class='inner-btn'><span>z</span></div>
-                </div>
-                <div class='key-btn left_window_key ' key-id='91 '>
-                    <div class='inner-btn'><span>⊞ LFT Win </span></div>
-                </div>
-                <div class='key-btn right_window_key ' key-id='92 '>
-                    <div class='inner-btn'><span>⊞ RGHT Win </span></div>
-                </div>
-                <div class='key-btn select_key ' key-id='93 '>
-                    <div class='inner-btn'><span></span></div>
-                </div>
-                <div class='key-btn numpad_0 ' key-id='96 '>
-                    <div class='inner-btn'><span>0</span></div>
-                </div>
-                <div class='key-btn numpad_1 ' key-id='97 '>
-                    <div class='inner-btn'><span>1</span></div>
-                </div>
-                <div class='key-btn numpad_2 ' key-id='98 '>
-                    <div class='inner-btn'><span>2</span></div>
-                </div>
-                <div class='key-btn numpad_3 ' key-id='99 '>
-                    <div class='inner-btn'><span>3</span></div>
-                </div>
-                <div class='key-btn numpad_4 ' key-id='100 '>
-                    <div class='inner-btn'><span>4</span></div>
-                </div>
-                <div class='key-btn numpad_5 ' key-id='101 '>
-                    <div class='inner-btn'><span>5</span></div>
-                </div>
-                <div class='key-btn numpad_6 ' key-id='102 '>
-                    <div class='inner-btn'><span>6</span></div>
-                </div>
-                <div class='key-btn numpad_7 ' key-id='103 '>
-                    <div class='inner-btn'><span>7</span></div>
-                </div>
-                <div class='key-btn numpad_8 ' key-id='104 '>
-                    <div class='inner-btn'><span>8</span></div>
-                </div>
-                <div class='key-btn numpad_9 ' key-id='105 '>
-                    <div class='inner-btn'><span>9</span></div>
-                </div>
-                <div class='key-btn multiply ' key-id='106 '>
-                    <div class='inner-btn'><span>*</span></div>
-                </div>
-                <div class='key-btn add ' key-id='107 '>
-                    <div class='inner-btn'><span>+</span></div>
-                </div>
-                <div class='key-btn subtract ' key-id='109 '>
-                    <div class='inner-btn'><span>-</span></div>
-                </div>
-                <div class='key-btn decimal_point ' key-id='110 '>
-                    <div class='inner-btn'><span>.,</span></div>
-                </div>
-                <div class='key-btn divide ' key-id='111 '>
-                    <div class='inner-btn'><span>/</span></div>
-                </div>
-               
-                <div class='key-btn num_lock ' key-id='144 '>
-                    <div class='inner-btn'><span>Num Lock</span></div>
-                </div>
-              
-                <div class='key-btn semi_colon ' key-id='186 '>
-                    <div class='inner-btn'><span>;</span></div>
-                </div>
-                <div class='key-btn equal_sign ' key-id='187 '>
-                    <div class='inner-btn'><span>=</span></div>
-                </div>
-                <div class='key-btn comma ' key-id='188 '>
-                    <div class='inner-btn'><span>,</span></div>
-                </div>
-                <div class='key-btn dash ' key-id='189 '>
-                    <div class='inner-btn'><span></span></div>
-                </div>
-                <div class='key-btn period ' key-id='190 '>
-                    <div class='inner-btn'><span>.</span></div>
-                </div>
-                <div class='key-btn forward_slash ' key-id='191 '>
-                    <div class='inner-btn'><span>\</span></div>
-                </div>
-                <div class='key-btn grave_accent ' key-id='192 '>
-                    <div class='inner-btn'><span></span></div>
-                </div>
-                <div class='key-btn open_bracket ' key-id='219 '>
-                    <div class='inner-btn'><span>{</span></div>
-                </div>
-                <div class='key-btn back_slash ' key-id='220 '>
-                    <div class='inner-btn'><span>/</span></div>
-                </div>
-                <div class='key-btn close_braket ' key-id='221 '>
-                    <div class='inner-btn'><span>}</span></div>
-                </div>
-                <div class='key-btn single_quote ' key-id='222 '>
-                    <div class='inner-btn'><span>'</span></div>
-                </div>
-
+                <div class="keyboard-inner">
+    
+    
+                    <!-- First Row -->
+                    <div id='Escape' class='key-btn' key-id='27'>
+                        <div class='inner-btn'><span class='firstChar'>Esc</span></div>
+                    </div>
+    
+    
+                    <div id='F1' class='key-btn' key-id='112'>
+                        <div class='inner-btn'><span class='firstChar'>f1</span></div>
+                    </div>
+                    <div id='F2' class='key-btn' key-id='113'>
+                        <div class='inner-btn'><span class='firstChar'>f2</span></div>
+                    </div>
+                    <div id='F3' class='key-btn' key-id='114'>
+                        <div class='inner-btn'><span class='firstChar'>f3</span></div>
+                    </div>
+                    <div id='F4' class='key-btn' key-id='115'>
+                        <div class='inner-btn'><span class='firstChar'>f4</span></div>
+                    </div>
+    
+                    <div id='F5' class='key-btn' key-id='116'>
+                        <div class='inner-btn'><span class='firstChar'>f5</span></div>
+                    </div>
+                    <div id='F6' class='key-btn' key-id='117'>
+                        <div class='inner-btn'><span class='firstChar'>f6</span></div>
+                    </div>
+                    <div id='F7' class='key-btn' key-id='118'>
+                        <div class='inner-btn'><span class='firstChar'>f7</span></div>
+                    </div>
+                    <div id='F8' class='key-btn' key-id='119'>
+                        <div class='inner-btn'><span class='firstChar'>f8</span></div>
+                    </div>
+    
+                    <div id='F9' class='key-btn' key-id='120'>
+                        <div class='inner-btn'><span class='firstChar'>f9</span></div>
+                    </div>
+                    <div id='F10' class='key-btn' key-id='121'>
+                        <div class='inner-btn'><span class='firstChar'>f10</span></div>
+                    </div>
+                    <div id='F11' class='key-btn' key-id='122'>
+                        <div class='inner-btn'><span class='firstChar'>f11</span></div>
+                    </div>
+                    <div id='F12' class='key-btn' key-id='123'>
+                        <div class='inner-btn'><span class='firstChar'>f12</span></div>
+                    </div>
+    
+    
+                    <div id='ScrollLock' class='key-btn' key-id='145'>
+                        <div class='inner-btn'><span class='firstChar'>Scr lk</span></div>
+                    </div>
+                    <div id='Pause' class='key-btn' key-id='19'>
+                        <div class='inner-btn'><span class='firstChar'>Pause</span></div>
+                    </div>
+    
+    <!-- End of First Row -->
+    
+    
+    
+    <!-- Second Row -->
+    <div id='grave_accent' class='key-btn' key-id='192'>
+        <div class='inner-btn'><span class='firstChar'>~</span><span class='secondChar'>`</span></div>
+    </div>
+    
+    
+    
+    <div id='Digit1' class='key-btn' key-id='49'>
+        <div class='inner-btn'><span class='firstChar'>!</span><span class='secondChar'>1</span></div>
+    </div>
+    <div id='Digit2' class='key-btn' key-id='50'>
+        <div class='inner-btn'><span class='firstChar'>@</span><span class='secondChar'>2</span></div>
+    </div>
+    <div id='Digit3' class='key-btn' key-id='51'>
+        <div class='inner-btn'><span class='firstChar'>#</span><span class='secondChar'>3</span></div>
+    </div>
+    <div id='Digit4' class='key-btn' key-id='52'>
+        <div class='inner-btn'><span class='firstChar'>$</span><span class='secondChar'>4</span></div>
+    </div>
+    <div id='Digit5' class='key-btn' key-id='53'>
+        <div class='inner-btn'><span class='firstChar'>%</span><span class='secondChar'>5</span></div>
+    </div>
+    <div id='Digit6' class='key-btn' key-id='54'>
+        <div class='inner-btn'><span class='firstChar'>^</span><span class='secondChar'>6</span></div>
+    </div>
+    <div id='Digit7' class='key-btn' key-id='55'>
+        <div class='inner-btn'><span class='firstChar'>&</span><span class='secondChar'>7</span></div>
+    </div>
+    <div id='Digit8' class='key-btn' key-id='56'>
+        <div class='inner-btn'><span class='firstChar'>*</span><span class='secondChar'>8</span></div>
+    </div>
+    <div id='Digit9' class='key-btn' key-id='57'>
+        <div class='inner-btn'><span class='firstChar'>(</span><span class='secondChar'>9</span></div>
+    </div>
+    <div id='Digit0' class='key-btn' key-id='48'>
+        <div class='inner-btn'><span class='firstChar'>)</span><span class='secondChar'>0</span></div>
+    </div>
+    <div id='Minus' class='key-btn' key-id='189'>
+        <div class='inner-btn'><span class='firstChar'>_</span><span class='secondChar'>-</span></div>
+    </div>
+    
+    
+    <div id='Insert' class='key-btn' key-id='45'>
+        <div class='inner-btn'><span class='firstChar'>Ins</span></div>
+    </div>
+    <div id='Home' class='key-btn' key-id='36'>
+        <div class='inner-btn'><span class='firstChar'>Home</span></div>
+    </div>
+    <div id='PageUp' class='key-btn' key-id='33'>
+        <div class='inner-btn'><span class='firstChar'>Page Up</span></div>
+    </div>
+    
+    
+    
+    
+    <div id='NumLock' class='key-btn' key-id='144'>
+        <div class='inner-btn'><span class='firstChar'>Num Lock</span></div>
+    </div>
+    <div id='NumpadDivide' class='key-btn' key-id='111'>
+        <div class='inner-btn'><span class='firstChar'>/</span></div>
+    </div>
+    <div id='NumpadMultiply' class='key-btn' key-id='106'>
+        <div class='inner-btn'><span class='firstChar'>*</span></div>
+    </div>
+    <div id='NumpadSubtract' class='key-btn' key-id='109'>
+        <div class='inner-btn'><span class='firstChar'>-</span></div>
+    </div>
+    
+    
+    <!-- End of Second Row -->
+    
+    
+    
+    
+    <!-- Third Row -->
+    
+    <div id='KeyTab' class='key-btn' key-id='Key9'>
+        <div class='inner-btn'><span class='firstChar'> ↹ Tab</span></div>
+    </div>
+    <div id='KeyQ' class='key-btn' key-id='Key81'>
+        <div class='inner-btn'><span class='firstChar'>q</span></div>
+    </div>
+    <div id='KeyW' class='key-btn' key-id='Key87'>
+        <div class='inner-btn'><span class='firstChar'>w</span></div>
+    </div>
+    <div id='KeyE' class='key-btn' key-id='Key69'>
+        <div class='inner-btn'><span class='firstChar'>e</span></div>
+    </div>
+    <div id='KeyR' class='key-btn' key-id='Key82'>
+        <div class='inner-btn'><span class='firstChar'>r</span></div>
+    </div>
+    <div id='KeyT' class='key-btn' key-id='Key84'>
+        <div class='inner-btn'><span class='firstChar'>t</span></div>
+    </div>
+    <div id='KeyY' class='key-btn' key-id='Key89'>
+        <div class='inner-btn'><span class='firstChar'>y</span></div>
+    </div>
+    <div id='KeyU' class='key-btn' key-id='Key85'>
+        <div class='inner-btn'><span class='firstChar'>u</span></div>
+    </div>
+    <div id='KeyI' class='key-btn' key-id='Key73'>
+        <div class='inner-btn'><span class='firstChar'>i</span></div>
+    </div>
+    <div id='KeyO' class='key-btn' key-id='Key79'>
+        <div class='inner-btn'><span class='firstChar'>o</span></div>
+    </div>
+    <div id='KeyP' class='key-btn' key-id='Key80'>
+        <div class='inner-btn'><span class='firstChar'>p</span></div>
+    </div>    <div id='KeyTab' class='key-btn' key-id='Key9'>
+        <div class='inner-btn'><span class='firstChar'> ↹ Tab</span></div>
+    </div>
+    <div id='KeyQ' class='key-btn' key-id='Key81'>
+        <div class='inner-btn'><span class='firstChar'>q</span></div>
+    </div>
+    <div id='KeyW' class='key-btn' key-id='Key87'>
+        <div class='inner-btn'><span class='firstChar'>w</span></div>
+    </div>
+    <div id='KeyE' class='key-btn' key-id='Key69'>
+        <div class='inner-btn'><span class='firstChar'>e</span></div>
+    </div>
+    <div id='KeyR' class='key-btn' key-id='Key82'>
+        <div class='inner-btn'><span class='firstChar'>r</span></div>
+    </div>
+    <div id='KeyT' class='key-btn' key-id='Key84'>
+        <div class='inner-btn'><span class='firstChar'>t</span></div>
+    </div>
+    <div id='KeyY' class='key-btn' key-id='Key89'>
+        <div class='inner-btn'><span class='firstChar'>y</span></div>
+    </div>
+    <div id='KeyU' class='key-btn' key-id='Key85'>
+        <div class='inner-btn'><span class='firstChar'>u</span></div>
+    </div>
+    <div id='KeyI' class='key-btn' key-id='Key73'>
+        <div class='inner-btn'><span class='firstChar'>i</span></div>
+    </div>
+    <div id='KeyO' class='key-btn' key-id='Key79'>
+        <div class='inner-btn'><span class='firstChar'>o</span></div>
+    </div>
+    <div id='KeyP' class='key-btn' key-id='Key80'>
+        <div class='inner-btn'><span class='firstChar'>p</span></div>
+    </div>
+    <div id='BracketLeft' class='key-btn' key-id='219'>
+        <div class='inner-btn'><span class='firstChar'>{</span><span class='secondChar'>[</span></div>
+    </div>
+    <div id='BracketRight' class='key-btn' key-id='221'>
+        <div class='inner-btn'><span class='firstChar'>}</span><span class='secondChar'>]</span></div>
+    </div>
+    <div id='EnterLeft' class='key-btn' key-id='13'>
+        <div class='inner-btn'><span class='firstChar'>↵ Enter </span></div>
+    </div>
+    
+    
+    <div id='Delete' class='key-btn' key-id='46'>
+        <div class='inner-btn'><span class='firstChar'>Del</span></div>
+    </div>
+    <div id='Rnd' class='key-btn' key-id='35'>
+        <div class='inner-btn'><span class='firstChar'>End</span></div>
+    </div>
+    <div id='PageDown' class='key-btn' key-id='34'>
+        <div class='inner-btn'><span class='firstChar'>Page Down</span></div>
+    </div>
+    
+    
+    <div id='Numpad7' class='key-btn' key-id='103'>
+        <div class='inner-btn'><span class='firstChar'>7</span></div>
+    </div>
+    <div id='Numpad8' class='key-btn' key-id='104'>
+        <div class='inner-btn'><span class='firstChar'>8</span></div>
+    </div>
+    <div id='Numpad9' class='key-btn' key-id='105'>
+        <div class='inner-btn'><span class='firstChar'>9</span></div>
+    </div>
+    
+    <div id='add' class='key-btn' key-id='107'>
+        <div class='inner-btn'><span class='firstChar'>+</span></div>
+    </div>
+    
+    
+    
+    
+    <!-- End of Third Row -->
+    
+    <!-- Fourth Row -->
+    
+    <div id='caps_lock' class='key-btn' key-id='20'>
+        <div class='inner-btn'><span class='firstChar'>Caps Lock</span></div>
+    </div>
+    
+    <div id='KeyA' class='key-btn' key-id='Key65'>
+        <div class='inner-btn'><span class='firstChar'>a</span></div>
+    </div>
+    <div id='KeyS' class='key-btn' key-id='Key83'>
+        <div class='inner-btn'><span class='firstChar'>s</span></div>
+    </div>
+    <div id='KeyD' class='key-btn' key-id='Key68'>
+        <div class='inner-btn'><span class='firstChar'>d</span></div>
+    </div>
+    <div id='KeyF' class='key-btn' key-id='Key70'>
+        <div class='inner-btn'><span class='firstChar'>f</span></div>
+    </div>
+    <div id='KeyG' class='key-btn' key-id='Key71'>
+        <div class='inner-btn'><span class='firstChar'>g</span></div>
+    </div>
+    <div id='KeyH' class='key-btn' key-id='Key72'>
+        <div class='inner-btn'><span class='firstChar'>h</span></div>
+    </div>
+    
+    <div id='KeyJ' class='key-btn' key-id='Key74'>
+        <div class='inner-btn'><span class='firstChar'>j</span></div>
+    </div>
+    <div id='KeyK' class='key-btn' key-id='Key75'>
+        <div class='inner-btn'><span class='firstChar'>k</span></div>
+    </div>
+    <div id='KeyL' class='key-btn' key-id='Key76'>
+        <div class='inner-btn'><span class='firstChar'>l</span></div>
+    </div>
+    <div id='Semicolon' class='key-btn' key-id='186'>
+        <div class='inner-btn'><span class='firstChar'>:</span><span class='secondChar'>;</span></div>
+    </div>
+    <div id='SingleQuote' class='key-btn' key-id='222'>
+        <div class='inner-btn'><span class='firstChar'>"</span><span class='secondChar'>'</span></div>
+    </div>
+    <div id='Slash' class='key-btn' key-id='220'>
+        <div class='inner-btn'><span class='firstChar'>/</span></div>
+    </div>
+    
+    
+    
+    
+    <div id='Numpad4' class='key-btn' key-id='100'>
+        <div class='inner-btn'><span class='firstChar'>4</span></div>
+    </div>
+    <div id='Numpad5' class='key-btn' key-id='101'>
+        <div class='inner-btn'><span class='firstChar'>5</span></div>
+    </div>
+    <div id='Numpad6' class='key-btn' key-id='102'>
+        <div class='inner-btn'><span class='firstChar'>6</span></div>
+    </div>
+    
+    <!-- End of Fourth Row -->
+    
+    
+    <!-- Fifth Row -->
+    <div id='ShiftLeft' class='key-btn' key-id='16'>
+        <div class='inner-btn'><span class='firstChar'>⇧ Shift</span></div>
+    </div>
+    <div id='KeyZ' class='key-btn' key-id='Key90'>
+        <div class='inner-btn'><span class='firstChar'>z</span></div>
+    </div>
+    <div id='KeyX' class='key-btn' key-id='Key88'>
+        <div class='inner-btn'><span class='firstChar'>x</span></div>
+    </div>
+    <div id='KeyC' class='key-btn' key-id='Key67'>
+        <div class='inner-btn'><span class='firstChar'>c</span></div>
+    </div>
+    <div id='KeyV' class='key-btn' key-id='Key86'>
+        <div class='inner-btn'><span class='firstChar'>v</span></div>
+    </div>
+    <div id='KeyB' class='key-btn' key-id='Key66'>
+        <div class='inner-btn'><span class='firstChar'>b</span></div>
+    </div>
+    <div id='KeyN' class='key-btn' key-id='Key78'>
+        <div class='inner-btn'><span class='firstChar'>n</span></div>
+    </div>
+    <div id='KeyM' class='key-btn' key-id='Key77'>
+        <div class='inner-btn'><span class='firstChar'>m</span></div>
+    </div>
+    <div id='Comma' class='key-btn' key-id='188'>
+        <div class='inner-btn'><span class='firstChar'>,</span></div>
+    </div>
+    <div id='Period' class='key-btn' key-id='190'>
+        <div class='inner-btn'><span class='firstChar'>&gt</span><span class='secondChar'>.</span></div>
+    </div>
+    <div id='IntlBackslash' class='key-btn' key-id='191'>
+        <div class='inner-btn'><span class='firstChar'>?</span><span class='secondChar'>\</span></div>
+    </div>
+    <div id='ShiftRight' class='key-btn' key-id='16'>
+        <div class='inner-btn'><span class='firstChar'>Shift ⇧</span></div>
+    </div>
+    
+    
+    <div id='ArrowUp' class='key-btn' key-id='38'>
+        <div class='inner-btn'><span class='firstChar'>↑</span></div>
+    </div>
+    
+    
+    
+    <div id='Numpad1' class='key-btn' key-id='97'>
+        <div class='inner-btn'><span class='firstChar'>1</span></div>
+    </div>
+    <div id='Numpad2' class='key-btn' key-id='98'>
+        <div class='inner-btn'><span class='firstChar'>2</span></div>
+    </div>
+    <div id='Numpad3' class='key-btn' key-id='99'>
+        <div class='inner-btn'><span class='firstChar'>3</span></div>
+    </div>
+    <div id='EnterRight' class='key-btn' key-id='13'>
+        <div class='inner-btn'><span class='firstChar'>↵</span></div>
+    </div>
+    
+    <!-- End of Fifth Row -->
+             
+         
+    
+    <!-- Sixth Row -->
+    <div id='ControlLeft' class='key-btn' key-id='17'>
+        <div class='inner-btn'><span class='firstChar'>ctrl</span></div>
+    </div>
+    <div id='MetaLeft' class='key-btn' key-id='91'>
+        <div class='inner-btn'><span class='firstChar'>⊞ Win </span></div>
+    </div>
+    <div id='AltLeft' class='key-btn' key-id='18'>
+        <div class='inner-btn'><span class='firstChar'>alt</span></div>
+    </div>
+    <div id='Space' class='key-btn' key-id='32'>
+        <div class='inner-btn'><span class='firstChar'>___</span></div>
+    </div>
+    <div id='AltRight' class='key-btn' key-id='18'>
+        <div class='inner-btn'><span class='firstChar'>alt</span></div>
+    </div>
+    <div id='MetaRight' class='key-btn' key-id='92'>
+        <div class='inner-btn'><span class='firstChar'>Win ⊞</span></div>
+    </div>
+    <div id='ContextMenu' class='key-btn' key-id='93'>
+        <div class='inner-btn'><span class='firstChar'>≣ Menu</span></div>
+    </div>
+    <div id='ControlRight' class='key-btn' key-id='17'>
+        <div class='inner-btn'><span class='firstChar'>ctrl</span></div>
+    </div>
+    
+    
+    <div id='ArrowLeft' class='key-btn' key-id='37'>
+        <div class='inner-btn'><span class='firstChar'>←</span></div>
+    </div>
+    <div id='ArrowDown' class='key-btn' key-id='40'>
+        <div class='inner-btn'><span class='firstChar'>↓</span></div>
+    </div>
+    <div id='ArrowRight' class='key-btn' key-id='39'>
+        <div class='inner-btn'><span class='firstChar'>→</span></div>
+    </div>
+    
+    
+    <div id='Numpad0' class='key-btn' key-id='96'>
+        <div class='inner-btn'><span class='firstChar'>0</span></div>
+    </div>
+    
+    <div id='NumpadDecimal' class='key-btn' key-id='110'>
+        <div class='inner-btn'><span class='firstChar'>.</span><span class='secondChar'>,</span></div>
+    </div>
+    
+    <!-- End of Sixth Row -->
+                
+    
+                    
+                   
+                   
+                    <!-- <div id='select_key' class='key-btn' key-id='93'>
+                        <div class='inner-btn'><span class='firstChar'></span></div>
+                    </div> -->
+    
+                 <div id='equal_sign' class='key-btn' key-id='187'>
+                        <div class='inner-btn'><span class='firstChar'>=</span></div>
+                    </div>
+                  
+                   
+                    
+                    
+                   
+    
+                   
+    
+                 
+    
+                </div>
+    
             </div>
-
-        </div>
 
     </div>
 
@@ -378,6 +484,15 @@
       </div>
 
     </div>
+
+<div id="mouseEventWrapper">
+
+    <div class="mouseEventContainer">
+        <div><p>Window Not in Focus</p></div>
+       <div><em>please mouse over the browser tab to continue</em></div>
+    </div>
+
+</div>
 
 
 </body>
