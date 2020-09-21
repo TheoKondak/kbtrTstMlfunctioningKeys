@@ -1,45 +1,59 @@
-h1{
+@import 'theme-neo-white.scss';
+@import 'theme-neo-black.scss';
+
+$btn-width: 6.66%;
+
+h1 {
     font-size: 1.4em;
 }
 
-*{
+* {
     padding-top: 0;
-padding-left: 0;
-padding-bottom: 0;
-padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
 
-margin-top: 0;
-margin-left: 0;
-margin-bottom: 0;
-margin-right: 0;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+
+    font-size: 2vw;
 }
-
 
 /* Keyboard Buttons */
 
 #keyboard {
     & .kb-btn-xs {
+        // 1 Single Buttons Length
+        width: $btn-width;
     }
 
     & .kb-btn-sm {
+        // 1.5 Single Buttons Length
+        width: ($btn-width * 1.5);
     }
 
     & .kb-btn-md {
+        // 2 Single Buttons Length
+        width: ($btn-width * 2);
     }
 
     & .kb-btn-lg {
+        // 3 Single Buttons Length
+        width: ($btn-width * 3);
     }
 
     & .kb-btn-xxl {
+        // 10 Single Buttons Length
+        width: ($btn-width * 10);
     }
 
-& .active{
-    -webkit-box-shadow: 0px 0px 16px -1px rgba(255,255,255,1);
--moz-box-shadow: 0px 0px 16px -1px rgba(255,255,255,1);
-box-shadow: 0px 0px 16px -1px rgba(255,255,255,1);
-}
-
-
+    & .active {
+        -webkit-box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 16px -1px rgba(255, 255, 255, 1);
+    }
 }
 
 html {
@@ -50,165 +64,270 @@ span {
     font-size: 0.4em;
 }
 
+.flex {
+    display: flex;
+}
 
+.grid {
+    display: grid;
+}
 
-
-#mainWrapper{
+#mainWrapper {
     height: 100vh;
     width: 100vw;
-     
+
     display: flex;
     flex-wrap: wrap;
-    
-    & #header{
+
+    & #header {
         max-height: 12vh;
-            min-height: 100px;
-            width: 100vw;
-        
-            & .page-title {
+        min-height: 100px;
+        width: 100vw;
+
+        & .page-title {
             height: auto;
-                width: 100%;
-                Background-color: blue;
-                
-                display: flex;
-                justify-content: flex-start;
-            
-            & h1{
-            font-size: 1.2em;
-            
-            padding: .2em;
+            width: 100%;
+            background-color: white;
+
+            display: flex;
+            justify-content: flex-start;
+
+            & h1 {
+                font-size: 1.2em;
+
+                padding: 0.2em;
                 display: block;
-        }
             }
-        
-        & .header-info{
-            background-color: orange;
         }
-       
-    }
-      
-        & #main{
-            max-height: 86vh;
-            height: 100%;
-            
-          background-color: purple;  
-       
-            & .mainLeft{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
 
-            & .sideBar{
-                margin-top: 20px;
-
-                overflow-y: scroll;
-                max-height: 84vh;
-            }
-          
+        & .header-info {
+            background-color: white;
         }
-    
-    
-    
-}
-
-// Mouse Event Wrapper
-#mouseEventWrapper{    
-    height: 100vw;
-    width: 100vw;
-   opacity: 0;
-
-    transition-duration: 1s;
-    
-    
-    &.mouseLeave{
-     opacity: 1;
     }
-    
-   & .mouseEventContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    
-    height: 140px;
-    padding: 20px;
-    background-color: orange;
-    
-       
-           -webkit-box-shadow: 10px 10px 196px 37vw rgba(255,145,0,.75);
--moz-box-shadow: 10px 10px 196px 37vw rgba(255,145,0,.75);
-box-shadow: 10px 10px 196px 37vw rgba(255,145,0,.75);
-    
-    position: absolute;
-    left: 40%;
-    bottom: 10px;
-    
-    & div{
-        
-        
-         & p{
-        font-size: .4em;
-        margin-bottom: 0;
-    }
-    
-    & em{
-        font-size: .3em;
-    }
-    
-    }
-}
-    
-    
-}
 
+    & #main {
+        max-height: 86vh;
+        height: 100%;
+        width: 100%;
 
-#keyboard {
-    background-color: #666;
+        background-color: white;
 
-    & .keyboard-inner {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-
-        & .key-btn {
-            min-width: 40px;
-            min-height: 40px;
-            border: 1px solid black;
-
+        & .mainLeft {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
 
-            margin: 5px;
-            padding: 10px;
+        & .sideBar {
+            margin-top: 20px;
 
-            line-height: 0.6em;
-            font-size: 0.8em;
+            overflow-y: scroll;
+            max-height: 84vh;
+        }
+    }
+}
 
-            & span {
-                display: block;
-                font-size: 0.6em;
-                line-height: 0.6em;
+// Mouse Event Wrapper
+#mouseEventWrapper {
+    height: 100%;
+    width: 100vw;
+    opacity: 0;
+
+    transition-duration: 1s;
+
+    &.mouseLeave {
+        opacity: 1;
+
+     
+    }
+
+    & .mouseEventContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 140px;
+        padding: 20px;
+        background-color: white;
+
+        -webkit-box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+        box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+
+        border-radius: 20px;
+        background: linear-gradient(145deg, #e6e6e6, #ffffff);
+        
+
+
+
+        position: absolute;
+        left: 40%;
+        bottom: 10px;
+
+        & div {
+            & p {
+                font-size: 0.4em;
+                margin-bottom: 0;
+            }
+
+            & em {
+                font-size: 0.3em;
             }
         }
+    }
+}
+
+#keyboard {
+    // background-color: ;
+    margin-left: 10px;
+    // max-width: 90%;
+
+    & .keyboard-inner {
+        grid-template-columns: (67% 1% 13% 1% 17%);
+
+        & .keyboard-column {
+            width: 100%;
+            flex-wrap: wrap;
+            margin: 0 1%;
+
+            & .keyboard-row {
+                width: 100%;
+            }
+        }
+
+        // Excemptions
+        & .volume-container {
+            flex-wrap: wrap;
+        }
+    }
+
+    & span {
+        &.primaryChar {
+            font-size: 0.4em;
+            line-height: 1em;
+        }
+
+        &.secondaryChar {
+            font-size: 0.3em;
+            line-height: 1em;
+        }
+    }
+
+    & .first-row {
+        justify-content: space-between;
+    }
+
+    & .four-btn {
+        width: $btn-width * 4;
+
+        & .kb-btn-xs {
+            width: 23%;
+        }
+    }
+
+    // SECOND COLUMN
+    & .three-btn {
+        width: 100%;
+
+        & .kb-btn-xs {
+            width: 30%;
+        }
+
+        & .kb-btn-md {
+            width: 40%;
+        }
+
+        
+
+        & .keyboard-row {
+            height: 66px;
+        }
+
+        & .second-row,
+        & .third-row {
+            margin-top: -26px;
+        }
+
+        & .fourth-row {
+            justify-content: center;
+            align-self: flex-end;
+            margin-bottom: -26px;
+        }
+
+        & .fifth-row {
+            align-self: flex-end;
+            margin-bottom: 5px;
+        }
+    }
+
+    & .one-btn .kb-btn-xs {
+        width: 100%;
+    }
+
+
+& #EnterLeft,
+& #NumpadEnter,
+& #NumpadAdd {
+    & span {
+        font-size: 0.4em;
+    }
+}
+
+& #ContextMenu{
+
+    & span{
+        font-size: .34em;
+    }
+}
+
+& #NumpadAdd,
+& #NumpadEnter {
+    height: 180%;
+}
+}
+// THIRD COLUMN
+
+.emptyBtnPlaceholder {
+    margin: 5px;
+    padding: 10px;
+}
+
+// Keyboard Buttons
+.key-btn {
+    width: 60px;
+    height: 60px;
+    // border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+    padding: 10px;
+
+    line-height: 0.6em;
+    font-size: 0.8em;
+
+    & span {
+        display: block;
+        font-size: 0.6em;
+        line-height: 0.6em;
+        text-align: center;
     }
 }
 
 #pressedLog {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 
     & .keyLogAction {
         margin: 4px auto;
         min-width: 330px;
 
-        background-color: #666;
+        // background-color: #666;
         padding: 10px;
 
         display: flex;
@@ -218,7 +337,7 @@ box-shadow: 10px 10px 196px 37vw rgba(255,145,0,.75);
             display: block;
             font-size: 0.4em;
             font-weight: 300;
-            color: white;
+            color: black;
         }
 
         & .keyLogBtn,
@@ -231,7 +350,7 @@ box-shadow: 10px 10px 196px 37vw rgba(255,145,0,.75);
         }
 
         & .keyLogBtn {
-            border: 1px solid black;
+            // border: 1px solid black;
 
             padding: 5px 20px;
         }

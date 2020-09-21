@@ -2,7 +2,7 @@
 // Source: https://stackoverflow.com/questions/6472707/how-to-get-info-on-what-key-was-pressed-on-for-how-long
 
 const keyboardMap = {
-    Backspace: [8, '←'],
+    Backspace: [8, '🠐'],
     Tab: [9, ' ↹ Tab'],
     EnterLeft: [13, '↵ Enter '],
     EnterRight: [13, '↵'],
@@ -108,14 +108,17 @@ const keyboardMap = {
     Backslash: [222, ' \' '],
     Backquote: [192, '`'],
     AudioVolumeDown: [174, 'vlm ↓'],
-    AudioVolumeUp: [175, 'vlm ↑']
+    AudioVolumeUp: [175, 'vlm ↑'],
+    MediaTrackNext: [176, '⏭'],
+    MediaPlayPause: [179, '⏯'],
+    PrintScreen: [44, 'prt sscr']
 }
 
 const pressedLog = document.getElementById('pressedLog'),
     pressed = {};
 
 window.onkeydown = function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent Button Default Behavior 
     pressed[e.which] ? pressed[e.which] : pressed[e.which] = e.timeStamp;
 
 
@@ -127,30 +130,30 @@ window.onkeyup = function (e) {
     const duration = (e.timeStamp - pressed[e.which]) / 1000;
     let getIcon;
 
-    // console.log('Key: ' + e.key);
-    // console.log('Code: ' + e.code + ' | keyCode: ' + e.keyCode);
-    // console.log(e);
+    console.log('Key: ' + e.key);
+    console.log('Code: ' + e.code + ' | keyCode: ' + e.keyCode);
+    console.log(e);
 
-    e.preventDefault();
+    e.preventDefault(); // Prevent Button Default Behavior 
 
 keyPressUp(e);
 
     switch (e.keyCode) {
 
+        // Some Keys have no Code, so in order to find the keys.
         case 13: e.location == 0 ? getIcon = keyboardMap.EnterLeft : getIcon = keyboardMap.EnterRight; break;
         case 16: e.location == 1 ? getIcon = keyboardMap.ShiftLeft : getIcon = keyboardMap.ShiftRight; break;
         case 17: e.location == 1 ? getIcon = keyboardMap.ControlLeft : getIcon = keyboardMap.ControlRight; break;
         case 18: e.location == 1 ? getIcon = keyboardMap.AltLeft : getIcon = keyboardMap.AltRight; break;
         case 174: getIcon = keyboardMap.AudioVolumeDown; break;
         case 175: getIcon = keyboardMap.AudioVolumeUp; break;
+        case 179: getIcon = keyboardMap.MediaPlayPause; break;
         default: getIcon = keyboardMap[e.code];
 
     }
 
     pressedLog.innerHTML += '<div class="keyLogAction"><span class="keyLogBtn">' + getIcon[1] + '</span><span class="keyLogTxt"> pressed for </span><span class="keyLogTime">' + Math.round((duration + Number.EPSILON) * 1000) / 1000 + '</span><span class="keyLogSeconds">  seconds</span></div>';
     pressed[e.which] = 0;
-
-
 
     if (!pressed[e.which]) return;
 };
@@ -167,18 +170,61 @@ mouseEvent.addEventListener('mouseenter', e => mouseEventWrapper.classList.remov
 
 
 
-const keyPressDown = (e) => {
+const keyPressDown = (e) => {  
+    let keyPressed = ''
     
-    const keyPressed = e.code;
+    e.code != '' ? keyPressed = e.code : keyPressed = e.keyCode;
+
+    // const keyPressed = e.code;
     console.log(keyPressed);
     const element = document.getElementById(keyPressed);
     element.classList.add('active');
-  
 }
 
 
 const keyPressUp = (e) => {
-    const keyPressed = e.code;
+    // const keyPressed = e.code;
+
+    let keyPressed = ''
+    
+    e.code != '' ? keyPressed = e.code : keyPressed = e.keyCode;
     const element = document.getElementById(keyPressed);
     element.classList.remove('active');
 }
+
+
+
+
+
+
+
+
+const calculateKeyboardColumnsWidth = () => {
+
+    // Widths Measured on Das Keyboard x50 in inches
+const widths = {
+    totalWidth: 16.6,
+    firstColumn: 11.2,
+    secondColumn: 2.2,
+    thirdColumn: 3,
+    gapBetweenColumns: 0.1
+    
+}
+
+console.log('First Column %: ' + widths.firstColumn*(100/widths.totalWidth));
+console.log('Second Column %: ' + widths.secondColumn*(100/widths.totalWidth));
+console.log('Third Column %: ' + widths.thirdColumn*(100/widths.totalWidth));
+console.log('Third Column %: ' + widths.gapBetweenColumns*(100/widths.totalWidth));
+console.log('Sum (should be just bellow 100): ' + (widths.firstColumn*(100/widths.totalWidth) + widths.secondColumn*(100/widths.totalWidth) + widths.thirdColumn*(100/widths.totalWidth) + widths.gapBetweenColumns*(100/widths.totalWidth)));
+
+}
+
+
+calculateKeyboardColumnsWidth();
+
+
+
+const loadTheme = document.getElementById('keyboard');
+
+document.getElementById('themeWhite').onclick = () => loadTheme.classList.add('neoWhite');
+document.getElementById('themeBlack').onclick = () => loadTheme.classList.add('neoBlack')

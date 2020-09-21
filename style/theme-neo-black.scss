@@ -1,0 +1,79 @@
+
+
+.neoBlack{
+    
+    
+    // border: 1px solid black;
+        border-radius: 4px;
+        padding: 30px 20px;
+        
+    border-radius: 10px;
+    background: #000;
+    box-shadow:  20px 20px 60px #a8a8a8, 
+                 -20px -20px 60px #000;
+        
+        & .keyboard-inner{
+            // border: 1px solid black;
+        padding: 10px;
+    
+            
+    border-radius: 20px;
+    background: linear-gradient(145deg, #e6e6e6, #000);
+    box-shadow:  20px 20px 57px #d6d6d6, 
+                 -20px -20px 57px #000;
+            
+            
+            & .key-btn{
+    border-radius: 50px;
+    background: #000;
+    box-shadow:  20px 20px 60px #d1d1d1, 
+                 -20px -20px 60px #000;
+            }
+            
+            & .active{
+                border-radius: 50px;
+    background: #000;
+    box-shadow: inset 20px 20px 60px #bababa, 
+                inset -20px -20px 60px #000;
+            }
+            
+        }
+        
+    }
+    
+        
+       #pressedLog{
+            
+           padding: 20px 0;
+           
+            & .keyLogAction{
+                border-radius: 50px;
+    background: linear-gradient(145deg, #000, #e6e6e6);
+    box-shadow:  20px 20px 57px #d6d6d6, 
+                 -20px -20px 57px #000;
+                
+                padding: 10px 0;
+                
+                
+            }
+           
+            
+                  
+           
+           & .keyLogBtn{
+            border-radius: 50px;
+    background: linear-gradient(145deg, #e6e6e6, #000);
+    box-shadow:  20px 20px 57px #7d7d7d, 
+                 -20px -20px 57px #000;
+    
+               
+               margin-left: 10px;
+               }
+               
+        
+           
+            
+        }
+        
+    
+    

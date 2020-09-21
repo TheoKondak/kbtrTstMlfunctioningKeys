@@ -1,3 +1,83 @@
+.neoWhite {
+  border-radius: 4px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #a8a8a8, -20px -20px 60px #ffffff;
+}
+.neoWhite .keyboard-inner {
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 20px 20px 57px #d6d6d6, -20px -20px 57px #ffffff;
+}
+.neoWhite .keyboard-inner .key-btn {
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #ffffff;
+}
+.neoWhite .keyboard-inner .active {
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: inset 20px 20px 60px #bababa, inset -20px -20px 60px #ffffff;
+}
+
+#pressedLog {
+  padding: 20px 0;
+}
+#pressedLog .keyLogAction {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow: 20px 20px 57px #d6d6d6, -20px -20px 57px #ffffff;
+  padding: 10px 0;
+}
+#pressedLog .keyLogBtn {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 20px 20px 57px #7d7d7d, -20px -20px 57px #ffffff;
+  margin-left: 10px;
+}
+
+.neoBlack {
+  border-radius: 4px;
+  padding: 30px 20px;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 20px 20px 60px #a8a8a8, -20px -20px 60px #000;
+}
+.neoBlack .keyboard-inner {
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e6e6e6, #000);
+  box-shadow: 20px 20px 57px #d6d6d6, -20px -20px 57px #000;
+}
+.neoBlack .keyboard-inner .key-btn {
+  border-radius: 50px;
+  background: #000;
+  box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #000;
+}
+.neoBlack .keyboard-inner .active {
+  border-radius: 50px;
+  background: #000;
+  box-shadow: inset 20px 20px 60px #bababa, inset -20px -20px 60px #000;
+}
+
+#pressedLog {
+  padding: 20px 0;
+}
+#pressedLog .keyLogAction {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #000, #e6e6e6);
+  box-shadow: 20px 20px 57px #d6d6d6, -20px -20px 57px #000;
+  padding: 10px 0;
+}
+#pressedLog .keyLogBtn {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e6e6e6, #000);
+  box-shadow: 20px 20px 57px #7d7d7d, -20px -20px 57px #000;
+  margin-left: 10px;
+}
+
 h1 {
   font-size: 1.4em;
 }
@@ -11,9 +91,25 @@ h1 {
   margin-left: 0;
   margin-bottom: 0;
   margin-right: 0;
+  font-size: 2vw;
 }
 
 /* Keyboard Buttons */
+#keyboard .kb-btn-xs {
+  width: 6.66%;
+}
+#keyboard .kb-btn-sm {
+  width: 9.99%;
+}
+#keyboard .kb-btn-md {
+  width: 13.32%;
+}
+#keyboard .kb-btn-lg {
+  width: 19.98%;
+}
+#keyboard .kb-btn-xxl {
+  width: 66.6%;
+}
 #keyboard .active {
   -webkit-box-shadow: 0px 0px 16px -1px white;
   -moz-box-shadow: 0px 0px 16px -1px white;
@@ -26,6 +122,14 @@ html {
 
 span {
   font-size: 0.4em;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 #mainWrapper {
@@ -42,7 +146,7 @@ span {
 #mainWrapper #header .page-title {
   height: auto;
   width: 100%;
-  Background-color: blue;
+  background-color: white;
   display: flex;
   justify-content: flex-start;
 }
@@ -52,12 +156,13 @@ span {
   display: block;
 }
 #mainWrapper #header .header-info {
-  background-color: orange;
+  background-color: white;
 }
 #mainWrapper #main {
   max-height: 86vh;
   height: 100%;
-  background-color: purple;
+  width: 100%;
+  background-color: white;
 }
 #mainWrapper #main .mainLeft {
   display: flex;
@@ -71,7 +176,7 @@ span {
 }
 
 #mouseEventWrapper {
-  height: 100vw;
+  height: 100%;
   width: 100vw;
   opacity: 0;
   transition-duration: 1s;
@@ -86,10 +191,12 @@ span {
   align-items: center;
   height: 140px;
   padding: 20px;
-  background-color: orange;
-  -webkit-box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
-  -moz-box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
-  box-shadow: 10px 10px 196px 37vw rgba(255, 145, 0, 0.75);
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 196px 37vw rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
   position: absolute;
   left: 40%;
   bottom: 10px;
@@ -103,17 +210,84 @@ span {
 }
 
 #keyboard {
-  background-color: #666;
+  margin-left: 10px;
 }
 #keyboard .keyboard-inner {
-  display: flex;
-  justify-content: space-around;
+  grid-template-columns: 67% 1% 13% 1% 17%;
+}
+#keyboard .keyboard-inner .keyboard-column {
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 1%;
+}
+#keyboard .keyboard-inner .keyboard-column .keyboard-row {
+  width: 100%;
+}
+#keyboard .keyboard-inner .volume-container {
   flex-wrap: wrap;
 }
-#keyboard .keyboard-inner .key-btn {
-  min-width: 40px;
-  min-height: 40px;
-  border: 1px solid black;
+#keyboard span.primaryChar {
+  font-size: 0.4em;
+  line-height: 1em;
+}
+#keyboard span.secondaryChar {
+  font-size: 0.3em;
+  line-height: 1em;
+}
+#keyboard .first-row {
+  justify-content: space-between;
+}
+#keyboard .four-btn {
+  width: 26.64%;
+}
+#keyboard .four-btn .kb-btn-xs {
+  width: 23%;
+}
+#keyboard .three-btn {
+  width: 100%;
+}
+#keyboard .three-btn .kb-btn-xs {
+  width: 30%;
+}
+#keyboard .three-btn .kb-btn-md {
+  width: 40%;
+}
+#keyboard .three-btn .keyboard-row {
+  height: 66px;
+}
+#keyboard .three-btn .second-row, #keyboard .three-btn .third-row {
+  margin-top: -26px;
+}
+#keyboard .three-btn .fourth-row {
+  justify-content: center;
+  align-self: flex-end;
+  margin-bottom: -26px;
+}
+#keyboard .three-btn .fifth-row {
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+#keyboard .one-btn .kb-btn-xs {
+  width: 100%;
+}
+#keyboard #EnterLeft span, #keyboard #NumpadEnter span, #keyboard #NumpadAdd span {
+  font-size: 0.4em;
+}
+#keyboard #ContextMenu span {
+  font-size: 0.34em;
+}
+#keyboard #NumpadAdd, #keyboard #NumpadEnter {
+  height: 180%;
+}
+
+.emptyBtnPlaceholder {
+  margin: 5px;
+  padding: 10px;
+}
+
+.key-btn {
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,10 +296,11 @@ span {
   line-height: 0.6em;
   font-size: 0.8em;
 }
-#keyboard .keyboard-inner .key-btn span {
+.key-btn span {
   display: block;
   font-size: 0.6em;
   line-height: 0.6em;
+  text-align: center;
 }
 
 #pressedLog {
@@ -137,7 +312,6 @@ span {
 #pressedLog .keyLogAction {
   margin: 4px auto;
   min-width: 330px;
-  background-color: #666;
   padding: 10px;
   display: flex;
   align-items: flex-end;
@@ -146,7 +320,7 @@ span {
   display: block;
   font-size: 0.4em;
   font-weight: 300;
-  color: white;
+  color: black;
 }
 #pressedLog .keyLogAction .keyLogBtn, #pressedLog .keyLogAction .keyLogTxt, #pressedLog .keyLogAction .keyLogTime, #pressedLog .keyLogAction .keyLogSeconds {
   display: inline-block;
@@ -154,7 +328,6 @@ span {
   padding-left: 0.36em;
 }
 #pressedLog .keyLogAction .keyLogBtn {
-  border: 1px solid black;
   padding: 5px 20px;
 }
 #pressedLog .keyLogAction .keyLogTxt {
